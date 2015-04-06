@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="lib/q.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.6.0/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.4.1/backbone.marionette.min.js"></script>
+
+    <script src="lib/primus.js"></script>
+    <script src="lib/comet.js"></script>
+
+    <script type="text/html" id="tpl-root">
+        <div class="chat-log-wrapper">
+            <div class="log">
+
+            </div>
+        </div>
+        <div class="chat-input-wrapper">
+            <input type="text" class="chat-input" placeholder="Enter message..." name="chat-input" />
+        </div>
+    </script>
+
+    <script type="text/html" id="tpl-log-system">
+        <p class="system"><%= text %></p>
+    </script>
+
+    <script type="text/html" id="tpl-log-channel">
+        <p class="channel">[<%= channelLink(channel) %>] <%= userLink(from) %>: <%= disarmMessage(text) %></p>
+    </script>
+
+    <script type="text/html" id="tpl-log-private">
+        <p class="private">
+            <% if (isTo) { %>To <%= userLink(to) %><% } else { %>From <%= userLink(from) %><% } %>:
+            <%= disarmMessage(text) %>
+        </p>
+    </script>
+
+    <script type="text/html" id="tpl-log-error">
+        <p class="error"><%= text %></p>
+    </script>
+
+    <script type="text/html" id="tpl-user-link"><a href="#" class="user-link" data-id="<%= user %>"><%= user %></a></script>
+
+    <script type="text/html" id="tpl-channel-link"><a href="#" class="channel-link" data-id="<%= channel %>"><%= channel %></a></script>
+
+    <script src="example.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Chat Example</h1>
+    <p class="description">
+
+    </p>
+    <div class="rgn-app"></div>
+</div>
+</body>
+</html>

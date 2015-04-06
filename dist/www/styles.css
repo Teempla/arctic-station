@@ -1,0 +1,70 @@
+.wrapper {
+    width:500px;
+    margin:auto;
+}
+
+h1 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.chat-log-wrapper,
+.chat-input-wrapper {
+    width:100%;
+}
+
+.chat-log-wrapper {
+    height: 300px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-input-wrapper {
+    padding:5px 0;
+}
+
+.chat-input {
+    width:490px;
+    border: 1px solid #eee;
+    padding:5px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.log {
+    vertical-align: text-bottom;
+    position:absolute;
+    bottom:0;
+}
+
+.log p {
+    font-size: 13px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 5px;
+    margin:0;
+}
+
+.log p a.channel-link,
+.log p a.user-link {
+    font-weight: bold;
+}
+
+.log p a {
+    color: inherit;
+}
+
+.log p a:hover {
+    text-decoration: none;
+}
+
+.log p.error {
+    font-weight: bold;
+    color:#f00;
+}
+
+.log p.system {
+    color:#B5B27E;
+}
+
+.log p.private {
+    color:#AC05E5;
+}
