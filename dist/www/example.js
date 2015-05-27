@@ -489,7 +489,7 @@ $(document).ready(function() {
             el: $('.rgn-app')
         });
 
-    var chat = window.chat = new Chat();
+    var chat = new Chat();
 
     rootRegion.show(chat);
 });

@@ -1,5 +1,7 @@
 "use strict";
 
+process.chdir(__dirname);
+
 var requirejs = require('requirejs'),
     backend;
 

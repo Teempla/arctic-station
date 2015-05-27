@@ -19,7 +19,7 @@ define([
 
     var logger = new (winston.Logger)(settings);
 
-    if(config.general.get('logentries.enable')){
+    if (config.general.get('logentries.enabled')) {
         logger.add(winston.transports.Logentries, {
             token: config.general.get('logentries.token'),
             level: config.general.get('logentries.level')

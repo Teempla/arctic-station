@@ -504,7 +504,7 @@ define([
          * @returns {Boolean}
          */
         checkCORSAccess: function(/*origin*/) {
-            return true; // @todo temporary
+            return true; // @todo disabled due to phonegap not providing origin value
 
             /*if (!origin) {
                 return true;

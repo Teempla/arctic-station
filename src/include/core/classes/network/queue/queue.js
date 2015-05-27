@@ -57,6 +57,10 @@ define([
             this._workers = {};
             this._ctags = {};
 
+            if (!config.general.get('rabbitmq.enabled')) {
+                return;
+            }
+
             var connection = this._connection = amqp.createConnection(this._getConnectionConfig()),
                 defer = Q.defer();
 

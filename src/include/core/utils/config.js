@@ -87,7 +87,7 @@ define([
 
                 _.extend(to, conf);
 
-                //logger.info('Configuration file loaded: ' + file);
+                console.log('Configuration file loaded: ' + file);
             });
 
             _.each(to, function(val, key) {
@@ -139,7 +139,7 @@ define([
             var conf = this.load(configFiles.general, data.general);
 
             // turn into array
-            conf['app.allowedHosts'] = conf['app.allowedHosts'].split(' ');
+            conf['app.allowedHosts'] = (conf['app.allowedHosts'] + '').split(' ');
 
             this.general = this.createConfig(conf);
         },
