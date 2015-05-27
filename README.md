@@ -3,10 +3,7 @@ Arctic Station
 
 ## What it does
 
-Arctic station is a realtime communications server written in nodejs that
-scales well horizontally and can potentially hold thousands of connections.
-The server was originally developed as a part of [Teempla](http://teempla.com) backend solution
-and now being released as an open source project.
+Arctic station is a realtime communications server written in nodejs that scales well horizontally and can potentially hold thousands of connections. The server was originally developed as a part of [Teempla](http://teempla.com) backend solution and now being released as an open source project.
 
 ## How it works
 
@@ -14,10 +11,7 @@ Consider the following [scheme](https://app.teempla.com/viewer/public/7adf2148c8
 
 ## Work in progress
 
-This is a work-in-progress technology that is currently being developed
-and not ready for any production usage. Some (or most) parts of API are
-going to be changed, replaced or removed and a lot of the code base is
-being rewritten.
+This is a work-in-progress technology that is currently being developed and not ready for any production usage. Some (or most) parts of API are going to be changed, replaced or removed and a lot of the code base is being rewritten.
 
 ## Installation
 
@@ -40,9 +34,7 @@ user.conf
 
 Each next config file overrides values from previous ones.
 
-For server to operate properly you'll need mongodb and redis connections.
-Settings for these connections can be defined in config sections ```[mongo]```
-and ```[redis]``` respectively.
+For server to operate properly you'll need mongodb and redis connections. Settings for these connections can be defined in config sections ```[mongo]``` and ```[redis]``` respectively.
 
 ## Startup
 
@@ -58,4 +50,4 @@ Not yet available.
 
 ## Live Demo
 
-Chat example is available at
+Chat example is available at http://188.166.40.182:3000/
